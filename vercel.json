@@ -1,4 +1,12 @@
 {
+    "builds": [{
+        "src":"news/wsgi.py",
+        "use":"@vercel/pyhon",
+        "config":{
+            "maxLambdaSize": "15mb",
+            "runtime":"python3.11.3"
+        }
+    }],
     "routes": [
       {
         "src": "/(.*)",
