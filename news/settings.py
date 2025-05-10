@@ -11,12 +11,19 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+
+from pathlib import Path
+
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
+
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -28,7 +35,7 @@ SECRET_KEY = '8qe93s8h)u_0%yh+%m-p2(c3+-6xs4j1%)5s*oc19(j+djq8iy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -121,6 +128,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
+
 STATIC_ROOT = BASE_DIR / "staticfiles_build" / "static"
 
 STATIC_URL = '/static/'
